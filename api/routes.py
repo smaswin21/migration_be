@@ -19,3 +19,9 @@ def generate_map():
     """Generate a Folium map and save as an HTML file."""
     map_path = generate_visualizations(preprocessed_data)
     return jsonify({'map_path': map_path})
+
+@api_blueprint.route('/generate-map-2024', methods=['GET'])
+def generate_map_2024():
+    """Generate a Folium map for 2024 data and save it as an HTML file."""
+    map_path = generate_visualizations(preprocessed_data)
+    return jsonify({'map_path': map_path})
